@@ -21,5 +21,15 @@ Vue.component(embedMap.name, embedMap);
 Vue.component(saveShops.name, saveShops);
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    data: function () {
+        return {
+            arrayOfPlaces: []
+        };
+    },
+    methods: {
+        listOfPlacesUpdated: function (newArray) {
+            this.arrayOfPlaces = newArray;
+        }
+    }
 });

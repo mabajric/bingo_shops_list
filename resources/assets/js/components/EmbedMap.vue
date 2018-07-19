@@ -32,6 +32,7 @@
         methods: {
             mapsServiceCallback: function (results, status) {
                 if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    this.$emit('list-of-places-changed', results);
                     results.forEach((place) => {
                         this.createMarker(place.geometry.location);
                     });
