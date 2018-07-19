@@ -1,5 +1,5 @@
 <template>
-    <div id="embedMap"></div>
+    <div id="embedMap" class="m-auto"></div>
 </template>
 
 <script>

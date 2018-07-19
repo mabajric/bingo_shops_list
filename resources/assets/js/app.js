@@ -14,9 +14,11 @@ window.Vue = vue;
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-import embedMap from './components/EmbedMap.vue';
+import embedMap from './components/EmbedMap';
+import saveShops from './components/SaveShops';
 
 Vue.component(embedMap.name, embedMap);
+Vue.component(saveShops.name, saveShops);
 
 const app = new Vue({
     el: '#app'

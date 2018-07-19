@@ -13,8 +13,10 @@
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="app" class="container-fluid">
-    @yield('content')
+<div id="app" v-cloak>
+    <div class="container-fluid">
+        @yield('content')
+    </div>
 </div>
 <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkCW9xQuHNEh7nohWxHBHYU0WCYGzVZDA&libraries=places"></script>
