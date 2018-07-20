@@ -14,4 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/save-shops', 'ShopLocation@store');
+Route::post('/save-shops', 'ShopLocation@store')
+    ->name('save-shops');
+Route::get('/get-shops', 'ShopLocation@index')
+    ->name('get-shops');

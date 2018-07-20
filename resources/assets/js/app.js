@@ -16,9 +16,11 @@ window.Vue = vue;
 
 import embedMap from './components/EmbedMap';
 import saveShops from './components/SaveShops';
+import shopsList from './components/ShopsList';
 
 Vue.component(embedMap.name, embedMap);
 Vue.component(saveShops.name, saveShops);
+Vue.component(shopsList.name, shopsList);
 
 const app = new Vue({
     el: '#app',

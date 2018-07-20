@@ -18,9 +18,9 @@ class CreateShopsTable extends Migration
 
             $table->string('name');
             $table->string('address');
-            $table->integer('distance');
-            $table->float('latitude');
-            $table->float('longitude');
+            $table->float('distance');
+            $table->decimal('latitude', 12, 8);
+            $table->decimal('longitude', 12, 8);
 
             $table->timestamps();
         });
