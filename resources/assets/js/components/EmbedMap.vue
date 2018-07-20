@@ -5,9 +5,11 @@
 <script>
     export default {
         name: 'EmbedMap',
+        props: {
+            myPosition: google.maps.LatLng
+        },
         data: function () {
             return {
-                myPosition: new google.maps.LatLng(44.5345474, 18.6813046),
                 map: null,
                 service: null,
 
@@ -20,8 +22,7 @@
             });
 
             const request = {
-                query: 'Bingo',
-                fields: ['name', 'formatted_address', 'distance', 'geometry'],
+                keyword: 'Bingo',
                 location: this.myPosition,
                 radius: 5000
             };

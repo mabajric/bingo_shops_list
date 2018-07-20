@@ -24,8 +24,14 @@ const app = new Vue({
     el: '#app',
     data: function () {
         return {
+            myPosition: new google.maps.LatLng(44.5345474, 18.6813046),
             arrayOfPlaces: []
         };
+    },
+    computed: {
+        isSavingEnabled: function () {
+            return this.arrayOfPlaces.length > 0;
+        }
     },
     methods: {
         listOfPlacesUpdated: function (newArray) {

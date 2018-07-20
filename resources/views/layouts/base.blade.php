@@ -14,6 +14,7 @@
 </head>
 <body>
 <div id="app" v-cloak>
+    @include('helpers.NavigationBar')
     <div class="container-fluid">
         @yield('content')
     </div>

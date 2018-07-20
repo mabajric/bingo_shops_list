@@ -13,6 +13,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('master');
-});
+Route::view('/', 'master')
+    ->name('root');
+
+Route::view('/shops-list', 'shops-list')
+    ->name('shops-list');

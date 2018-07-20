@@ -1,6 +1,10 @@
 <template>
     <div class="text-center">
-        <button @click="saveShopsToBackend" class="btn btn-primary my-2">Save shops</button>
+        <button class="btn btn-danger my-3"
+                :disabled="!isSavingEnabled"
+                @click="saveShopsToBackend">
+            Save shops
+        </button>
     </div>
 </template>
 
@@ -8,7 +12,8 @@
     export default {
         name: 'SaveShops',
         props: {
-            listOfShops: Array
+            listOfShops: Array,
+            isSavingEnabled: Boolean
         },
         methods: {
             saveShopsToBackend: function () {
@@ -21,7 +26,7 @@
                         longitude: shopObject.geometry.location.lng()
                     }
                 ));
-                console.log(listOfShops);
+
                 $.post('/api/save-shops', {
                     listOfShops
                 }, (data, textStatus) => {

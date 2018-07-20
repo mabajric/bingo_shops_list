@@ -10,6 +10,12 @@
     display: none;
 }
 
+.navbar-brand {
+    img {
+        width: 5rem;
+    }
+}
+
 #embedMap {
     height: 25rem;
     width: 50rem;
