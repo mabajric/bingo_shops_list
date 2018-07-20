@@ -20,7 +20,7 @@
     </div>
 </div>
 <script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkCW9xQuHNEh7nohWxHBHYU0WCYGzVZDA&libraries=places"></script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkCW9xQuHNEh7nohWxHBHYU0WCYGzVZDA&libraries=places,geometry"></script>
 <script src="{{ mix('/js/app.js') }}" type="application/javascript"></script>
 </body>
 </html>

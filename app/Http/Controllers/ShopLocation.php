@@ -12,7 +12,8 @@ class ShopLocation extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        return Response(Shop::all());
+        return Response(Shop::orderBy('distance', 'asc')
+            ->get());
     }
 
     /**

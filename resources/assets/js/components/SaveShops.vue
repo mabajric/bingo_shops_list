@@ -12,20 +12,24 @@
     export default {
         name: 'SaveShops',
         props: {
+            myPosition: google.maps.LatLng,
             listOfShops: Array,
             isSavingEnabled: Boolean
         },
         methods: {
             saveShopsToBackend: function () {
-                const listOfShops = this.listOfShops.map((shopObject) => (
-                    {
+                const listOfShops = this.listOfShops.map((shopObject) => {
+                    const shopPosition = shopObject.geometry.location;
+                    return {
                         name: shopObject.name,
                         address: 'test',
-                        distance: 5,
-                        latitude: shopObject.geometry.location.lat(),
-                        longitude: shopObject.geometry.location.lng()
+                        distance: google.maps.geometry.spherical
+                            .computeDistanceBetween(this.myPosition, shopPosition)
+                            / 100, // to convert into kilometers
+                        latitude: shopPosition.lat(),
+                        longitude: shopPosition.lng()
                     }
-                ));
+                });
 
                 $.post('/api/save-shops', {
                     listOfShops
