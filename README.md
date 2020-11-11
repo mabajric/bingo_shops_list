@@ -4,6 +4,10 @@
 
 Project created at `Web Code Challenge` for `Virgin Pulse`.
 
+## Live demo
+
+Project is accessible through Heroku instance: http://bingo-shops-list.herokuapp.com/
+
 ## Author
 
 Maid Bajric, 2018.
